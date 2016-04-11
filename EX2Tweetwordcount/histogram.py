@@ -3,13 +3,12 @@ import sys
 import psycopg2 
  
 # connect to twitter feed database 
-conn = psycopg2.connect(database="Tcount", user="postgres", password="pass", host="localhost",port="5432") 
+conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost",port="5432") 
 cur = conn.cursor() 
   
-k1 = sys.argv[1]  #minimum number of occurences passed by user 
-k2 = sys.argv[2]  #maximum number of occurences passed by user 
- 
-#print all words and wordcounts where the count is between k1 and k2, sort by count descending 
+k1 = sys.argv[1]
+k2 = sys.argv[2]
+
 cur.execute("SELECT word, count FROM Tweetwordcount WHERE count >= %s AND count <= %s ORDER BY count DESC", (k1, k2)) 
 records = cur.fetchall() 
 for rec in records: 
