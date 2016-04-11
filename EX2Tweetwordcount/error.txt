@@ -1,0 +1,225 @@
+8111 [refresh-active-timer] INFO  backtype.storm.daemon.worker - All connections are ready for worker 88dfdcf0-b278-4238-b47e-939dd436633b:1027 with id 90b6798a-f1ef-46a8-86b8-9270f857bb3b
+8140 [Thread-15-tweet-spout] INFO  backtype.storm.daemon.executor - Opening spout tweet-spout:(9)
+8161 [Thread-19-__acker] INFO  backtype.storm.daemon.executor - Preparing bolt __acker:(1)
+8161 [Thread-17-__system] INFO  backtype.storm.daemon.executor - Preparing bolt __system:(-1)
+8163 [Thread-15-tweet-spout] INFO  backtype.storm.utils.ShellProcess - Storm multilang serializer: backtype.storm.multilang.JsonSerializer
+8166 [Thread-19-__acker] INFO  backtype.storm.daemon.executor - Prepared bolt __acker:(1)
+8168 [Thread-17-__system] INFO  backtype.storm.daemon.executor - Prepared bolt __system:(-1)
+8187 [Thread-9-count-bolt] INFO  backtype.storm.daemon.executor - Preparing bolt count-bolt:(3)
+8187 [Thread-9-count-bolt] INFO  backtype.storm.utils.ShellProcess - Storm multilang serializer: backtype.storm.multilang.JsonSerializer
+8197 [Thread-11-parse-tweet-bolt] INFO  backtype.storm.daemon.executor - Preparing bolt parse-tweet-bolt:(5)
+8198 [Thread-11-parse-tweet-bolt] INFO  backtype.storm.utils.ShellProcess - Storm multilang serializer: backtype.storm.multilang.JsonSerializer
+8212 [Thread-13-parse-tweet-bolt] INFO  backtype.storm.daemon.executor - Preparing bolt parse-tweet-bolt:(7)
+8213 [Thread-13-parse-tweet-bolt] INFO  backtype.storm.utils.ShellProcess - Storm multilang serializer: backtype.storm.multilang.JsonSerializer
+8403 [Thread-13-parse-tweet-bolt] INFO  backtype.storm.task.ShellBolt - Launched subprocess with pid 8429
+8406 [Thread-11-parse-tweet-bolt] INFO  backtype.storm.task.ShellBolt - Launched subprocess with pid 8427
+8421 [Thread-9-count-bolt] INFO  backtype.storm.task.ShellBolt - Launched subprocess with pid 8425
+8437 [Thread-9-count-bolt] INFO  backtype.storm.task.ShellBolt - Start checking heartbeat...
+8437 [Thread-9-count-bolt] INFO  backtype.storm.daemon.executor - Prepared bolt count-bolt:(3)
+8439 [Thread-11-parse-tweet-bolt] INFO  backtype.storm.task.ShellBolt - Start checking heartbeat...
+8439 [Thread-11-parse-tweet-bolt] INFO  backtype.storm.daemon.executor - Prepared bolt parse-tweet-bolt:(5)
+8443 [Thread-13-parse-tweet-bolt] INFO  backtype.storm.task.ShellBolt - Start checking heartbeat...
+8443 [Thread-13-parse-tweet-bolt] INFO  backtype.storm.daemon.executor - Prepared bolt parse-tweet-bolt:(7)
+8448 [Thread-36] ERROR backtype.storm.task.ShellBolt - Halting process: ShellBolt died.
+java.lang.RuntimeException: backtype.storm.multilang.NoOutputException: Pipe to subprocess seems to be broken! No output read.
+Serializer Exception:
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/run.py", line 25, in <module>
+    main()
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/run.py", line 21, in main
+    cls().run()
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/storm/component.py", line 484, in run
+    self._setup_component(storm_conf, context)
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/storm/component.py", line 246, in _setup_component
+    backupCount=backup_count)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 118, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 65, in __init__
+    logging.FileHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib64/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 2] No such file or directory: u'/tmp/894fe223-7e6b-4ec3-8109-d34a45a3f8fc/supervisor/stormdist/EX2tweetwordcount-1-1460360663/resources/"/root/EX2Tweetwordcount/logs"/streamparse_EX2tweetwordcount_parse-tweet-bolt_5_8427.log'
+
+
+        at backtype.storm.utils.ShellProcess.readShellMsg(ShellProcess.java:101) ~[storm-core-0.9.5.jar:0.9.5]
+        at backtype.storm.task.ShellBolt$BoltReaderRunnable.run(ShellBolt.java:318) ~[storm-core-0.9.5.jar:0.9.5]
+        at java.lang.Thread.run(Thread.java:745) [na:1.7.0_79]
+8448 [Thread-39] ERROR backtype.storm.task.ShellBolt - Halting process: ShellBolt died.
+java.lang.RuntimeException: backtype.storm.multilang.NoOutputException: Pipe to subprocess seems to be broken! No output read.
+Serializer Exception:
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/run.py", line 25, in <module>
+    main()
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/run.py", line 21, in main
+    cls().run()
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/storm/component.py", line 484, in run
+    self._setup_component(storm_conf, context)
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/storm/component.py", line 246, in _setup_component
+    backupCount=backup_count)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 118, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 65, in __init__
+    logging.FileHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib64/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 2] No such file or directory: u'/tmp/894fe223-7e6b-4ec3-8109-d34a45a3f8fc/supervisor/stormdist/EX2tweetwordcount-1-1460360663/resources/"/root/EX2Tweetwordcount/logs"/streamparse_EX2tweetwordcount_count-bolt_3_8425.log'
+
+
+        at backtype.storm.utils.ShellProcess.readShellMsg(ShellProcess.java:101) ~[storm-core-0.9.5.jar:0.9.5]
+        at backtype.storm.task.ShellBolt$BoltReaderRunnable.run(ShellBolt.java:318) ~[storm-core-0.9.5.jar:0.9.5]
+        at java.lang.Thread.run(Thread.java:745) [na:1.7.0_79]
+8449 [Thread-39] ERROR backtype.storm.daemon.executor -
+java.lang.RuntimeException: backtype.storm.multilang.NoOutputException: Pipe to subprocess seems to be broken! No output read.
+Serializer Exception:
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/run.py", line 25, in <module>
+    main()
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/run.py", line 21, in main
+    cls().run()
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/storm/component.py", line 484, in run
+    self._setup_component(storm_conf, context)
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/storm/component.py", line 246, in _setup_component
+    backupCount=backup_count)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 118, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 65, in __init__
+    logging.FileHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib64/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 2] No such file or directory: u'/tmp/894fe223-7e6b-4ec3-8109-d34a45a3f8fc/supervisor/stormdist/EX2tweetwordcount-1-1460360663/resources/"/root/EX2Tweetwordcount/logs"/streamparse_EX2tweetwordcount_count-bolt_3_8425.log'
+
+
+        at backtype.storm.utils.ShellProcess.readShellMsg(ShellProcess.java:101) ~[storm-core-0.9.5.jar:0.9.5]
+        at backtype.storm.task.ShellBolt$BoltReaderRunnable.run(ShellBolt.java:318) ~[storm-core-0.9.5.jar:0.9.5]
+        at java.lang.Thread.run(Thread.java:745) [na:1.7.0_79]
+8448 [Thread-35] ERROR backtype.storm.task.ShellBolt - Halting process: ShellBolt died.
+java.lang.RuntimeException: backtype.storm.multilang.NoOutputException: Pipe to subprocess seems to be broken! No output read.
+Serializer Exception:
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/run.py", line 25, in <module>
+    main()
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/run.py", line 21, in main
+    cls().run()
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/storm/component.py", line 484, in run
+    self._setup_component(storm_conf, context)
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/storm/component.py", line 246, in _setup_component
+    backupCount=backup_count)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 118, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 65, in __init__
+    logging.FileHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib64/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 2] No such file or directory: u'/tmp/894fe223-7e6b-4ec3-8109-d34a45a3f8fc/supervisor/stormdist/EX2tweetwordcount-1-1460360663/resources/"/root/EX2Tweetwordcount/logs"/streamparse_EX2tweetwordcount_parse-tweet-bolt_7_8429.log'
+
+
+        at backtype.storm.utils.ShellProcess.readShellMsg(ShellProcess.java:101) ~[storm-core-0.9.5.jar:0.9.5]
+        at backtype.storm.task.ShellBolt$BoltReaderRunnable.run(ShellBolt.java:318) ~[storm-core-0.9.5.jar:0.9.5]
+        at java.lang.Thread.run(Thread.java:745) [na:1.7.0_79]
+8451 [Thread-35] ERROR backtype.storm.daemon.executor -
+java.lang.RuntimeException: backtype.storm.multilang.NoOutputException: Pipe to subprocess seems to be broken! No output read.
+Serializer Exception:
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/run.py", line 25, in <module>
+    main()
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/run.py", line 21, in main
+    cls().run()
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/storm/component.py", line 484, in run
+    self._setup_component(storm_conf, context)
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/storm/component.py", line 246, in _setup_component
+    backupCount=backup_count)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 118, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 65, in __init__
+    logging.FileHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib64/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 2] No such file or directory: u'/tmp/894fe223-7e6b-4ec3-8109-d34a45a3f8fc/supervisor/stormdist/EX2tweetwordcount-1-1460360663/resources/"/root/EX2Tweetwordcount/logs"/streamparse_EX2tweetwordcount_parse-tweet-bolt_7_8429.log'
+
+
+        at backtype.storm.utils.ShellProcess.readShellMsg(ShellProcess.java:101) ~[storm-core-0.9.5.jar:0.9.5]
+        at backtype.storm.task.ShellBolt$BoltReaderRunnable.run(ShellBolt.java:318) ~[storm-core-0.9.5.jar:0.9.5]
+        at java.lang.Thread.run(Thread.java:745) [na:1.7.0_79]
+8451 [Thread-36] ERROR backtype.storm.daemon.executor -
+java.lang.RuntimeException: backtype.storm.multilang.NoOutputException: Pipe to subprocess seems to be broken! No output read.
+Serializer Exception:
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/run.py", line 25, in <module>
+    main()
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/run.py", line 21, in main
+    cls().run()
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/storm/component.py", line 484, in run
+    self._setup_component(storm_conf, context)
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/storm/component.py", line 246, in _setup_component
+    backupCount=backup_count)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 118, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 65, in __init__
+    logging.FileHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib64/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 2] No such file or directory: u'/tmp/894fe223-7e6b-4ec3-8109-d34a45a3f8fc/supervisor/stormdist/EX2tweetwordcount-1-1460360663/resources/"/root/EX2Tweetwordcount/logs"/streamparse_EX2tweetwordcount_parse-tweet-bolt_5_8427.log'
+
+
+        at backtype.storm.utils.ShellProcess.readShellMsg(ShellProcess.java:101) ~[storm-core-0.9.5.jar:0.9.5]
+        at backtype.storm.task.ShellBolt$BoltReaderRunnable.run(ShellBolt.java:318) ~[storm-core-0.9.5.jar:0.9.5]
+        at java.lang.Thread.run(Thread.java:745) [na:1.7.0_79]
+8466 [ProcessThread(sid:0 cport:-1):] INFO  org.apache.storm.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1540447443e000c type:create cxid:0x3b zxid:0x25 txntype:-1 reqpath:n/a Error Path:/storm/errors/EX2tweetwordcount-1-1460360663 Error:KeeperErrorCode = NodeExists for /storm/errors/EX2tweetwordcount-1-1460360663
+8467 [ProcessThread(sid:0 cport:-1):] INFO  org.apache.storm.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1540447443e000c type:create cxid:0x3c zxid:0x26 txntype:-1 reqpath:n/a Error Path:/storm/errors/EX2tweetwordcount-1-1460360663 Error:KeeperErrorCode = NodeExists for /storm/errors/EX2tweetwordcount-1-1460360663
+8474 [ProcessThread(sid:0 cport:-1):] INFO  org.apache.storm.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1540447443e000c type:create cxid:0x3f zxid:0x29 txntype:-1 reqpath:n/a Error Path:/storm/errors/EX2tweetwordcount-1-1460360663/parse-tweet-bolt Error:KeeperErrorCode = NodeExists for /storm/errors/EX2tweetwordcount-1-1460360663/parse-tweet-bolt
+Traceback (most recent call last):
+  File "/opt/py27environment/bin/sparse", line 11, in <module>
+    sys.exit(main())
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/cli/sparse.py", line 57, in main
+    args.func(args)
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/cli/run.py", line 81, in main
+    debug=args.debug)
+  File "/opt/py27environment/lib/python2.7/site-packages/streamparse/cli/run.py", line 52, in run_local_topology
+    run(full_cmd)
+  File "/opt/py27environment/lib/python2.7/site-packages/invoke/__init__.py", line 27, in run
+    return Context().run(command, **kwargs)
+  File "/opt/py27environment/lib/python2.7/site-packages/invoke/context.py", line 53, in run
+    return runner_class(context=self).run(command, **kwargs)
+  File "/opt/py27environment/lib/python2.7/site-packages/invoke/runners.py", line 302, in run
+    raise Failure(result)
+invoke.exceptions.Failure: Command execution failure!
+
+Exit code: 11
+
+Stderr:
