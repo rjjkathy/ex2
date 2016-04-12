@@ -14,11 +14,14 @@ python createDAAndTable.py
 
 3. under EX2Tweetwordcount run: sparse run
 
-4. python finalresults.py <inputword>
+# wait for a while for data to be collected
+
+4. for getting all info: python finalresults.py
+   for getting info regarding on word : python finalresults.py <inputword>
+   for getting top 20 results: python finalresults.py arg1 arg2 # just give 2 args, will trigger top 20 selection
+
+   NOTE: Inside the two args mode for getting top 20 entries, there is python plotly library signed in using my credentials. Login credentials imported, should work for running elsewhere. However, in case it does not login, disbale the plot part, and refer to the histogram diagram in git or here https://plot.ly/~rjjkathy/0
+
 5. python python histogram.py <lowlimit> <upperlimit>
 
-6. ERROR: 1. The steps provided on ISVC wall did not fix the connection error, not sure if this is causing "2"
-          2. Storm gives error without logs, unable to successfully debug yet:
-		8366 [Thread-35] ERROR backtype.storm.task.ShellBolt - Halting process: ShellBolt died.
-                java.lang.RuntimeException: backtype.storm.multilang.NoOutputException: Pipe to subprocess seems to be broken! No output read.               
-                IOError: [Errno 2] No such file or directory: u'/tmp/05c5238e-8d39-4cb1-82df-bbd8744c6016/supervisor/stormdist/EX2tweetwordcount-1-1460363533/resources/"/root/EX2Tweetwordcount/logs"/streamparse_EX2tweetwordcount_count-bolt_3_9508.log'
+NOTE: if re-running sparse run, need to call createDBAndTable.py again to reset table, otherwise sparse local count will be out of sync with table counts
