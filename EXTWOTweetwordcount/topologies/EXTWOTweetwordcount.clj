@@ -1,9 +1,9 @@
-(ns tweetwordcount 
+(ns EXTWOTweetwordcount 
 2   (:use     [streamparse.specs]) 
 3   (:gen-class)) 
 4 
  
-5 (defn tweetwordcount [options] 
+5 (defn EXTWOTweetwordcount [options] 
 6    [ 
 7     ;; spout configuration 
 8     {"tweet-spout" (python-spout-spec 
